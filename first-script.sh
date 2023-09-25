@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Create a directory named "test" if it exist then remove it first and then go the test directory.
+# Create a directory named "test". If it exist then remove it first and then go the test directory.
 rm -rf test
 mkdir test
 cd test
