@@ -43,3 +43,6 @@ ls -lrt | grep file4
 cat <<EOF >> file4.txt
 This is a new line append in file4. 
 EOF
+
+# to symbolic link file4.txt
+ln -s test/file4.txt /home/node2/test2/file5.txt
