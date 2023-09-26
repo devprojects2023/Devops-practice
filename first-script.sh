@@ -46,3 +46,9 @@ EOF
 
 # to symbolic link file4.txt
 ln -s test/file4.txt /home/node2/test2/file5.txt
+
+# to check instance details
+uname -a
+
+# to know which user is logged in
+whoami
