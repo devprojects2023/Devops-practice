@@ -43,3 +43,5 @@ ls -lrt | grep file4
 cat <<EOF >> file4.txt
 This is a new line append in file4. 
 EOF
+
+echo "Hello This is a new"
