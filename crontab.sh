@@ -11,4 +11,4 @@ crontab -e
 # * 9 * * * "you_script_path"/home/ubuntu/ec2-stop.sh YOUR_INSTANCE_ID > "path_where_you_want_to_save_the_log_file"/stop.log 2>&1
 
 * 21 * * * /home/ubuntu/ec2-stop.sh i-abck19574151145 > /home/ubuntu/stop.log 2>&1
-* 9 * * * /home/ubuntu/ec2-start.sh i-abck19574151145 > /home/ubuntu/start.log 2>&
+* 9 * * * /home/ubuntu/ec2-start.sh i-abck19574151145 > /home/ubuntu/start.log 2>&1
