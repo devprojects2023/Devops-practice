@@ -13,11 +13,20 @@
 # to stop the registry
     docker stop registry
 
+# to create the jenkins network first
+    docker network create jenkins  
 
 # to build the Dockerfile and push that to local registry:
     docker build -t myjenkins:2.414.2-1 .
     docker tag myjenkins:2.414.2-1 localhost:5000/myjenkins
     docker push localhost:5000/myjenkins
+
+# to run the docker container use this. -p 50000:50000 is for expose the port for jenkins api. -v for create volume locally. At the end we can give the docker image name (localhost:5000/myjenkins).
+
+    docker run -d --name myjenkins --restart=on-failure --network jenkins  --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 -p 8080:8080 -p 50000:50000 -v /Users/docker-registry/Jenkins-volume:/var/jenkins_home -v /Users/docker-registry/Jenkins-volume/jenkins-docker-certs:/certs/client:ro localhost:5000/myjenkins                                                                    
+    
+    
+
 
 # to get the Jenkins password
     docker ps
