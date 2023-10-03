@@ -31,3 +31,20 @@
 # to get the Jenkins password
     docker ps
     docker logs <container-id>
+
+
+# install sonarqube by docker 
+    docker pull sonarqube:9.9.2-community
+    docker build -t sonarqube:9.9.2-community .
+    docker tag sonarqube:9.9.2-community localhost:5000/sonarqube:v1
+    docker push localhost:5000/sonarqube:v1
+
+    docker run -d --name mysonarqube -p 9000:9000 localhost:5000/sonarqube:v1 
+
+# install mongo by docker
+    docker pull mongo:latest
+    docker build -t mongo:latest .
+    docker tag mongo:latest localhost:5000/mongo:v1
+    docker push localhost:5000/mongo:v1
+
+    docker run -d --name mymongo -p 2717:27017 -v /Volumes/M2SSD/Devops-course/Devops-practice/Mongo:/data/db localhost:5000/mongo:v1
