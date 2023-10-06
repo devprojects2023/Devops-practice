@@ -48,3 +48,16 @@
     docker push localhost:5000/mongo:v1
 
     docker run -d --name mymongo -p 2717:27017 -v /Volumes/M2SSD/Devops-course/Devops-practice/Mongo:/data/db localhost:5000/mongo:v1
+
+
+# Maven Command Examples:
+# Here are some common Maven commands:
+
+mvn compile: this command will Compiles the project's code.
+mvn test: It will runs unit tests of compiled code.
+mvn package: It will packages the compiled code.
+mvn install: It will installs the package into the local repository.
+mvn deploy: It will deploys the package to a remote repository.
+mvn site: It will generates project documentation and reports.
+mvn site-deploy: It will deploys the generated documentation to a remote web server.
+mvn clean: It will executes the clean phase and delete any previous build outputs.
